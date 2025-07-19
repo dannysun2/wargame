@@ -66,7 +66,7 @@ class WarGame
     winning_players = cards.each_key.select { |x| cards[x].value == highest_card }
 
     if winning_players.size == 1
-      # Noticed an infinite loop as we're evulating the same card order
+      # Noticed an infinite loop as we're evaluating the same card order
       winning_players.first.cards.concat(accumulated.shuffle)
       puts "Player #{winning_players.first.label} wins the round."
     else
